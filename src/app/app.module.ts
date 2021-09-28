@@ -8,8 +8,8 @@ import { ViewerComponent } from "./viewer/viewer.component";
 
 @NgModule({
   declarations: [AppComponent, ViewerComponent],
+  imports: [BrowserModule, AppRoutingModule, NgxExtendedPdfViewerModule], // <-- adds microapp to hash path
   //imports: [BrowserModule, AppRoutingModule],
-  imports: [BrowserModule, AppRoutingModule, NgxExtendedPdfViewerModule],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
